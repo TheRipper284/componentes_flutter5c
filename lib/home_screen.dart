@@ -9,39 +9,49 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Componentes de flutter'),
       ),
-        body: ListView(
-          children: const [
-            ListTile(
-              leading: Icon(Icons.mode_of_travel),
-              title: Text('Mr. Bombastic',
-                      style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
-              ),
-              subtitle: Text('La granja',
-                        style: TextStyle(color: Colors.amberAccent, fontWeight: FontWeight.bold),
-                        ),
-              trailing: Icon(Icons.arrow_circle_right),
-            ),
-            Divider(),
-            ListTile(
-              leading: Icon(Icons.fire_extinguisher_outlined),
-              title: Text('Mr. Bombastic',
-                      style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
-              ),
-              subtitle: Text('U.S.A'),
-              trailing: Icon(Icons.fireplace),
-            ),
-            Divider(),
-            ListTile(
-              leading: Icon(Icons.fire_hydrant),
-              title: Text('Mr. Bombastic'),
-              subtitle: Text('Shhaggy',
-                        style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
-              ),
-              trailing: Icon(Icons.find_replace_outlined),
-            ),
 
+        body: ListView(
+          children: [
+            ListTile(
+              leading: const Icon(Icons.input_rounded),
+              title: Text(
+                'Entradas',
+                style: Theme.of(context).textTheme.headlineLarge,
+              ),
+              subtitle: const Text(
+                'Diferentes widgets para entradas de flutter',
+              ),
+              trailing: const Icon(
+                Icons.arrow_circle_right
+              ),
+            ),
+            const Divider(),
+            ListTile(
+              leading: const Icon(
+                Icons.list_alt_rounded
+              ),
+              title: Text(
+                'ListView.builder',
+                style: Theme.of(context).textTheme.headlineLarge,
+              ),
+              subtitle: const Text('Scroll infinito'),
+              trailing: const Icon(
+                Icons.fireplace
+              ),
+            ),
+            const  Divider(),
+            ListTile(
+              leading: const Icon(Icons.notification_add),
+              title: Text(
+                'Notificaciones',
+                style: Theme.of(context).textTheme.headlineLarge,
+              ),
+              subtitle: const Text('Creacion de notificaciones'),
+              trailing: const Icon(Icons.arrow_circle_right),
+            ),
           ],
         ),
+        
       );
   }
 }
