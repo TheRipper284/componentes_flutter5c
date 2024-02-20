@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica3_5c/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,49 +10,57 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Componentes de flutter'),
       ),
-
-        body: ListView(
-          children: [
-            ListTile(
-              leading: const Icon(Icons.input_rounded),
-              title: Text(
-                'Entradas',
-                style: Theme.of(context).textTheme.headlineLarge,
-              ),
-              subtitle: const Text(
-                'Diferentes widgets para entradas de flutter',
-              ),
-              trailing: const Icon(
-                Icons.arrow_circle_right
-              ),
+      body: ListView(
+        children: [
+          ListTile(
+            leading: const Icon(Icons.accessibility_new_sharp),
+            title: Text(
+              'Entradas',
+              style: AppTheme.lightTheme.textTheme.headlineLarge,
             ),
-            const Divider(),
-            ListTile(
-              leading: const Icon(
-                Icons.list_alt_rounded
-              ),
-              title: Text(
-                'ListView.builder',
-                style: Theme.of(context).textTheme.headlineLarge,
-              ),
-              subtitle: const Text('Scroll infinito'),
-              trailing: const Icon(
-                Icons.fireplace
-              ),
+            subtitle: Text(
+              'Diferentes widgets para entradas de flutter',
+              style: AppTheme.lightTheme.textTheme.bodySmall,
             ),
-            const  Divider(),
-            ListTile(
-              leading: const Icon(Icons.notification_add),
-              title: Text(
-                'Notificaciones',
-                style: Theme.of(context).textTheme.headlineLarge,
-              ),
-              subtitle: const Text('Creacion de notificaciones'),
-              trailing: const Icon(Icons.arrow_circle_right),
+            trailing: const Icon(
+              Icons.accessibility_new_rounded,
+              color: AppTheme.primaryColor,
             ),
-          ],
-        ),
-        
-      );
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.list_alt_rounded),
+            title: Text(
+              'ListView.builder',
+              style: AppTheme.lightTheme.textTheme.headlineLarge,
+            ),
+            subtitle: Text(
+              'Scroll infinito',
+              style: AppTheme.lightTheme.textTheme.bodySmall,
+            ),
+            trailing: const Icon(
+              Icons.add_reaction_outlined,
+              color: AppTheme.primaryColor,
+            ),
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.notification_add),
+            title: Text(
+              'Notificaciones',
+              style: AppTheme.lightTheme.textTheme.headlineLarge,
+            ),
+            subtitle: Text(
+              'Creacion de notificaciones',
+              style: AppTheme.lightTheme.textTheme.bodySmall,
+            ),
+            trailing: const Icon(
+              Icons.assist_walker_sharp,
+              color: AppTheme.primaryColor,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
