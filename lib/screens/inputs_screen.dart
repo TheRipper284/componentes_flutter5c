@@ -11,29 +11,34 @@ class InputsScreen extends StatefulWidget {
 class _InputsScreenState extends State<InputsScreen> {
   @override
   Widget build(BuildContext context) {
-    return  Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          'Entradas',
-          style: AppTheme.lightTheme.textTheme.headlineLarge,
-        ),
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: null, 
-              child: Text('Regresar'),
-            ),
-            ElevatedButton(
-              onPressed: null, 
-              child: Text(
-                'Ir a Data Screen'
+    return  Scaffold(
+      appBar: AppBar(title: const Text('Entradas')),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Entradas',
+            style: AppTheme.lightTheme.textTheme.headlineLarge,
+          ),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: null, 
+                child: Text(
+                  'Regresar'
+                ),
               ),
-            )
-          ],
-        )
-      ],
+              ElevatedButton(
+                onPressed: null, 
+                child: Text(
+                  'Ir a Data Screen'
+                ),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }
