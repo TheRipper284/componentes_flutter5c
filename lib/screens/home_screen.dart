@@ -18,7 +18,8 @@ class HomeScreen extends StatelessWidget {
           ListTile(
             leading: IconTheme(
               data: AppTheme.lightTheme.iconTheme,
-              child: const Icon(Icons.accessibility_new_sharp),
+              child: const Icon(Icons.accessibility_new_sharp,
+              ),
             ),
             title: Text(
               'Entradas',
