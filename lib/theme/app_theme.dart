@@ -6,7 +6,7 @@ class AppTheme{
   //Declaraciones de color 
   static const primaryColor = Color.fromARGB(2555, 0, 0, 0); //195, 114, 37, 37
   static const accentColor = Color.fromARGB(255, 14, 16, 112);  //255, 209, 147, 14
-  static const backColor = Color.fromARGB(255, 231, 220, 243);
+  static const backColor = Color.fromARGB(255, 255, 255, 255);
   static const iconColor = Color.fromARGB(255, 39, 50, 54);
 
   //Declaraciones de tema claro
