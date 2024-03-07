@@ -21,14 +21,7 @@ class _ImagesScreenState extends State<ImagesScreen> {
       body: ListView(
         children: [
           imageCard(),
-          
-          SizedBox(
-            height: 300,
-            width: 350,
-            child: Image(
-              image: AssetImage('bioshok.webp')
-            ),
-          ),
+          imageWeb(),
         ],
       )
     );
@@ -37,9 +30,34 @@ class _ImagesScreenState extends State<ImagesScreen> {
   Card imageCard(){
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      child:const Image(
-          image: AssetImage('far_cry.jpg')
+      margin: const EdgeInsets.all(20),
+      elevation: 10,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(30),
+        child: Column(
+          children: [
+            const Image(
+              image: AssetImage('far_cry.jpg'),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: Text('Invación a Tribu Enemiga',
+                                  style: AppTheme.lightTheme.textTheme.headlineLarge)
+            ),
+          ],
         ),
+      )
     );
   }
+
+  Widget imageWeb(){
+    return Center(
+      child: Image.network(
+        'https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2018/09/adventure-time-poster.jpg?fit=1000%2C638&quality=50&strip=all&ssl=1'
+      ),
+    );
+  }
+
 }
+
+// titulo del git commit Images2
