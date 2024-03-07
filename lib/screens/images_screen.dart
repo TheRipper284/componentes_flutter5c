@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practica3_5c/theme/app_theme.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class ImagesScreen extends StatefulWidget {
   const ImagesScreen({super.key});
@@ -51,13 +52,34 @@ class _ImagesScreenState extends State<ImagesScreen> {
   }
 
   Widget imageWeb(){
-    return Center(
-      child: Image.network(
-        'https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2018/09/adventure-time-poster.jpg?fit=1000%2C638&quality=50&strip=all&ssl=1'
-      ),
+    return Stack(
+      children: <Widget>[
+        const Center(
+            child: CircularProgressIndicator(),
+        ),
+        Center(
+          child: SizedBox(
+            height: 460,
+            width: 460,
+            child: FadeInImage.memoryNetwork(
+              placeholder: kTransparentImage, 
+              image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/708770/ss_a2295c12f7e8058ad70516e9ae8eee24467568aa.1920x1080.jpg?t=1620974912',
+            ), 
+          ),
+        ),
+      ]
     );
   }
 
 }
 
-// titulo del git commit Images2
+
+
+
+
+
+
+
+            //indica imagen de lugar web
+            // Image.network(
+            //   ),
