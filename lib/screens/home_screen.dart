@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
           ListTile(
             leading: IconTheme(
               data: AppTheme.lightTheme.iconTheme,
-              child: const Icon(Icons.accessibility_new_sharp,
+              child: const Icon(Icons.input_sharp,
               ),
             ),
             title: Text(
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
               style: AppTheme.lightTheme.textTheme.bodySmall,
             ),
             trailing: const Icon(
-              Icons.accessibility_new_rounded,
+              Icons.arrow_circle_right,
               color: AppTheme.primaryColor,
             ),
             onTap: (){
@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
               style: AppTheme.lightTheme.textTheme.bodySmall,
             ),
             trailing: const Icon(
-              Icons.add_reaction_outlined,
+              Icons.arrow_circle_right,
               color: AppTheme.primaryColor,
             ),
             onTap: (){
@@ -81,7 +81,7 @@ class HomeScreen extends StatelessWidget {
               style: AppTheme.lightTheme.textTheme.bodySmall,
             ),
             trailing: const Icon(
-              Icons.assist_walker_sharp,
+              Icons.arrow_circle_right,
               color: AppTheme.primaryColor,
             ),
             onTap: (){
@@ -107,7 +107,10 @@ class HomeScreen extends StatelessWidget {
             ),
             trailing: IconTheme(
               data: AppTheme.lightTheme.iconTheme,
-              child: const Icon(Icons.arrow_circle_right),
+              child: const Icon(
+                Icons.arrow_circle_right, 
+                color: AppTheme.primaryColor,
+              ),
             ),
             onTap: (){
               final ruta4 = MaterialPageRoute(builder: (context){
